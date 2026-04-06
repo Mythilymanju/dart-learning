@@ -110,3 +110,65 @@ void main() {
   d.sound();
   c.sound();
 }
+//Abstration
+
+abstract class Payment {
+  void pay(double amount); 
+}
+
+
+class CreditCard extends Payment {
+  @override
+  void pay(double amount) {
+    print("Paid ₹$amount using Credit Card");
+  }
+}
+
+
+class UPI extends Payment {
+  @override
+  void pay(double amount) {
+    print("Paid ₹$amount using UPI");
+  }
+}
+
+
+void main() {
+  Payment p;
+
+  p = CreditCard();
+  p.pay(1000);
+
+  p = UPI();
+  p.pay(500);
+}
+
+// Interface
+class Payment {
+  void pay(double amount) {}
+}
+
+
+class GooglePay implements Payment {
+  @override
+  void pay(double amount) {
+    print("Paid ₹$amount using Google Pay");
+  }
+}
+
+class PhonePe implements Payment {
+  @override
+  void pay(double amount) {
+    print("Paid ₹$amount using PhonePe");
+  }
+}
+
+void main() {
+  Payment p;
+
+  p = GooglePay();
+  p.pay(300);
+
+  p = PhonePe();
+  p.pay(700);
+}
