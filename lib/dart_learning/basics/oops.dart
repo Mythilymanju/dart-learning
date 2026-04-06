@@ -28,9 +28,9 @@ void main(){
 }
 //Encapsulation
 class BankAccount {
-  double _balance = 0; // 🔒 private variable
+  double _balance = 0; // 
 
-  // deposit method
+ 
   void deposit(double amount) {
     _balance += amount;
     print("Deposited: $amount");
