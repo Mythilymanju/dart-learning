@@ -28,7 +28,7 @@ void main(){
 }
 //Encapsulation
 class BankAccount {
-  double _balance = 0; // 
+  double _balance = 0;  
 
  
   void deposit(double amount) {
